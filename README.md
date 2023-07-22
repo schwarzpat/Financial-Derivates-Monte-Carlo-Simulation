@@ -12,7 +12,7 @@ The drift rate of the stock 𝜇 is set equal to the risk-free rate 𝑟. 𝛥�
 
 Tasks:
 1. Plot the first 10 simulated stock price paths in a diagram.
-2. Compute the expected payoff for a call option: \(exp(-r*T)*E[max(S_T-X,0]\). Set X equal to your chosen S0. Start with computing \(max(S_T-X, 0)\) for every \(S_T\) (that is, for every path) and then compute the mean value (the average \(S_T\)) over all 1000 paths. Compute with help of the Black Scholes formula the option price using S0, X and r and compare.
+2. Compute the expected payoff for a call option: \[exp(-r*T)*E[max(S_T-X,0]\]. Set X equal to your chosen S0. Start with computing \[max(S_T-X, 0)\] for every \[S_T\] (that is, for every path) and then compute the mean value (the average \[S_T\]) over all 1000 paths. Compute with help of the Black Scholes formula the option price using S0, X and r and compare.
 3. The option price computed by simulation in 2. is based on a discretized GBM. Simulate stock price paths and compute the option price using the exact solution for the GBM instead. Compare the option price with the price you found in 2. and with the Black Scholes price.
 4. Value an Asian call option (at the money) using your simulated stock price paths (using both discretized GBM and the exact solution for the GBM). Compare.
 
@@ -25,7 +25,7 @@ Tasks:
 
 2. **Simulate Stock Price Paths:** We simulated the stock price once a day for 252 trading days, using 1000 simulated stock price paths. The formula we used is:
 
-    \(S_t = S_{t-1} + \mu S_{t-1}\Delta t + \sigma S_{t-1}\epsilon \sqrt{\Delta t}\)
+    \[S_t = S_{t-1} + \mu S_{t-1}\Delta t + \sigma S_{t-1}\epsilon \sqrt{\Delta t}\]
 
 3. **Plot Stock Price Paths:** We plotted the first 10 simulated stock price paths. The plot is shown below:
 
@@ -33,29 +33,29 @@ Tasks:
 
 4. **Compute Expected Payoff for a Call Option:** We used the formula below to compute the expected payoff for a call option:
 
-    \(\exp(-rT) \times \mathbb{E}[\max(S_T - X, 0)]\)
+    \[\exp(-rT) \times \mathbb{E}[\max(S_T - X, 0)]\]
 
 5. **Compute Option Price using Black-Scholes Formula:** We used the Black-Scholes formula to compute the option price and compared it with the price obtained from the simulation. The Black-Scholes formula we used is:
 
-    \(C = S_0 e^{-qT} N(d1) - X e^{-rT} N(d2)\)
+    \[C = S_0 e^{-qT} N(d1) - X e^{-rT} N(d2)\]
 
     where
 
-    \(d1 = \frac{\ln \left(\frac{S_0}{X}\right) + \left(r - q + \frac{\sigma^2}{2}\right)T}{\sigma \sqrt{T}}\)
+    \[d1 = \frac{\ln \left(\frac{S_0}{X}\right) + \left(r - q + \frac{\sigma^2}{2}\right)T}{\sigma \sqrt{T}}\]
 
     and
 
-    \(d2 = d1 - \sigma \sqrt{T}\)
+    \[d2 = d1 - \sigma \sqrt{T}\]
 
 6. **Simulate Stock Price Paths using Exact GBM:** We simulated the stock price paths and computed the option price using the exact solution for Geometric Brownian Motion. The formula for the exact GBM is:
 
-    \(S_t = S_0 e^{(r - 0.5\sigma^2)t + \sigma\epsilon\sqrt{t}}\)
+    \[S_t = S_0 e^{(r - 0.5\sigma^2)t + \sigma\epsilon\sqrt{t}}\]
 
     ![Plot of the First 10 Simulated Stock Price Paths for the exact GBM](figures/figure2.png)
 
 8. **Compute Value of an Asian Call Option:** We computed the value of an Asian call option using the simulated stock price paths. The payoff at maturity for an Asian call option is:
 
-    \(\max(\bar{S_T} - X, 0)\)
+    \[\max(\bar{S_T} - X, 0)\]
     
 ## Results
 
@@ -79,7 +79,7 @@ Tasks:
 
 2. **Simulate Short Rate Paths Using the Vasicek Model:** We simulated 100 paths for short rates over 5 years, sampling once a month, and we did this for 5 different mean reversion speeds. The Vasicek model is represented by the following stochastic differential equation:
 
-    \(dr_t = a(b - r_t)dt + \sigma dW_t\)
+    \[dr_t = a(b - r_t)dt + \sigma dW_t\]
 
 3. **Plot Simulated Short Rate Paths:** We plotted the first 10 simulated short rate paths for each mean reversion speed. The plot is shown below:
 
@@ -93,7 +93,7 @@ Tasks:
 
 6. **Compute the Cost of an Interest Rate Cap:** We computed the cost of an interest rate cap that will offset any payments larger than 2% of a 5 million SEK loan. The cost of the cap is the sum of the expected payments, where each payment is computed as:
 
-    \(\max(r_t - (cap\_rate - bank\_fee), 0) \times loan\_amount \times \Delta t\)
+    \[\max(r_t - (cap\_rate - bank\_fee), 0) \times loan\_amount \times \Delta t\]
 
 ## Results
 
