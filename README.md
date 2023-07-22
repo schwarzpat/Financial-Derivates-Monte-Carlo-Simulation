@@ -51,7 +51,9 @@ Tasks:
 
     \(S_t = S_0 e^{(r - 0.5\sigma^2)t + \sigma\epsilon\sqrt{t}}\)
 
-7. **Compute Value of an Asian Call Option:** We computed the value of an Asian call option using the simulated stock price paths. The payoff at maturity for an Asian call option is:
+    ![Plot of the First 10 Simulated Stock Price Paths for the exact GBM](figures/figure2.png)
+
+8. **Compute Value of an Asian Call Option:** We computed the value of an Asian call option using the simulated stock price paths. The payoff at maturity for an Asian call option is:
 
     \(\max(\bar{S_T} - X, 0)\)
     
