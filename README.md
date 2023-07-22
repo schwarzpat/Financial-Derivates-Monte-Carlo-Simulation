@@ -29,7 +29,7 @@ Tasks:
 
 3. **Plot Stock Price Paths:** We plotted the first 10 simulated stock price paths. The plot is shown below:
 
-    ![Plot of the First 10 Simulated Stock Price Paths](plot.png)
+    ![Plot of the First 10 Simulated Stock Price Paths](figures/figure1.png)
 
 4. **Compute Expected Payoff for a Call Option:** We used the formula below to compute the expected payoff for a call option:
 
