@@ -29,7 +29,7 @@ Tasks:
 
 3. **Plot Stock Price Paths:** We plotted the first 10 simulated stock price paths. The plot is shown below:
 
-    ![Plot of the First 10 Simulated Stock Price Paths](figures/figure1.png)
+![Plot of the First 10 Simulated Stock Price Paths](figures/figure1.png)
 
 4. **Compute Expected Payoff for a Call Option:** We used the formula below to compute the expected payoff for a call option:
 
@@ -51,7 +51,7 @@ Tasks:
 
     $$S_t = S_0 e^{(r - 0.5\sigma^2)t + \sigma\epsilon\sqrt{t}}$$
 
-    ![Plot of the First 10 Simulated Stock Price Paths for the exact GBM](figures/figure2.png)
+![Plot of the First 10 Simulated Stock Price Paths for the exact GBM](figures/figure2.png)
 
 8. **Compute Value of an Asian Call Option:** We computed the value of an Asian call option using the simulated stock price paths. The payoff at maturity for an Asian call option is:
 
@@ -83,13 +83,13 @@ Tasks:
 
 3. **Plot Simulated Short Rate Paths:** We plotted the first 10 simulated short rate paths for each mean reversion speed. The plot is shown below:
 
-    ![Plot of the First 10 Simulated Short Rate Paths for Each Mean Reversion Speed](figures/figure3.png)
+![Plot of the First 10 Simulated Short Rate Paths for Each Mean Reversion Speed](figures/figure3.png)
 
 4. **Simulate a Zero Drift Vasicek Model for Short Rates:** We simulated a zero drift Vasicek model for short rates, simulating 100 paths for 5 years with monthly sampling.
 
 5. **Plot Simulated Short Rate Paths for the Zero Drift Vasicek Model:** We plotted the first 10 simulated short rate paths for the zero drift Vasicek model. The plot is shown below:
 
-    ![Plot of the First 10 Simulated Short Rate Paths for the Zero Drift Vasicek Model](figures/figure4.png)
+![Plot of the First 10 Simulated Short Rate Paths for the Zero Drift Vasicek Model](figures/figure4.png)
 
 6. **Compute the Cost of an Interest Rate Cap:** We computed the cost of an interest rate cap that will offset any payments larger than 2% of a 5 million SEK loan. The cost of the cap is the sum of the expected payments, where each payment is computed as:
 
