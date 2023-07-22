@@ -1,0 +1,97 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+
+\title{LaTeX Formulas for Monte Carlo Simulation of Stock Prices and Option Valuation}
+\maketitle
+
+Here are the LaTeX representations of all the formulas mentioned in the discussion:
+
+\begin{enumerate}
+\item The formula for the stock price simulation:
+
+\begin{equation*}
+S_t = S_{t-1} + \mu S_{t-1}\Delta t + \sigma S_{t-1}\epsilon \sqrt{\Delta t}
+\end{equation*}
+
+Where:
+\begin{itemize}
+\item \(S_t\) is the stock price at time \(t\),
+\item \(S_{t-1}\) is the stock price at time \(t-1\),
+\item \(\mu\) is the drift rate of the stock (which we set equal to the risk-free rate \(r\)),
+\item \(\sigma\) is the annual volatility of the stock,
+\item \(\Delta t\) is the size of a time step (we used \(\Delta t = 1/252\) for a year of 252 trading days), and
+\item \(\epsilon\) is a random shock sampled from the standard normal distribution.
+\end{itemize}
+
+\item The formula for the expected payoff of a call option:
+
+\begin{equation*}
+\exp(-rT) \times \mathbb{E}[\max(S_T - X, 0)]
+\end{equation*}
+
+Where:
+\begin{itemize}
+\item \(S_T\) is the stock price at maturity,
+\item \(X\) is the strike price (which we set equal to the initial stock price \(S_0\)),
+\item \(\mathbb{E}[\cdot]\) denotes the expected value (or mean), and
+\item The \(\max(a, b)\) function returns the greater of \(a\) and \(b\).
+\end{itemize}
+
+\item The Black-Scholes formula for a European call option:
+
+\begin{equation*}
+C = S_0 e^{-qT} N(d1) - X e^{-rT} N(d2)
+\end{equation*}
+
+Where:
+\begin{itemize}
+\item \(C\) is the price of the call option,
+\item \(S_0\) is the initial stock price,
+\item \(r\) is the annual risk-free interest rate,
+\item \(T\) is the time to maturity,
+\item \(N(\cdot)\) represents the cumulative distribution function of the standard normal distribution,
+\item \(q\) is the continuous dividend yield (which we assumed to be 0 as it wasn't provided),
+\item \(X\) is the strike price, and
+\item \(d1\) and \(d2\) are given by
+
+\begin{align*}
+d1 = \frac{\ln \left(\frac{S_0}{X}\right) + \left(r - q + \frac{\sigma^2}{2}\right)T}{\sigma \sqrt{T}}, \\
+d2 = d1 - \sigma \sqrt{T}
+\end{align*}
+\end{itemize}
+
+\item The formula for the stock price in the exact solution for Geometric Brownian Motion (GBM):
+
+\begin{equation*}
+S_t = S_0 e^{(r - 0.5\sigma^2)t + \sigma\epsilon\sqrt{t}}
+\end{equation*}
+
+Where:
+\begin{itemize}
+\item \(S_t\) is the stock price at time \(t\),
+\item \(S_0\) is the initial stock price,
+\item \(r\) is the annual risk-free interest rate,
+\item \(\sigma\) is the annual volatility of the stock,
+\item \(t\) is the time, and
+\item \(\epsilon\) is a standard normal random variable.
+\end{itemize}
+
+\item The payoff at maturity for an Asian call option:
+
+\begin{equation*}
+\max(\bar{S_T} - X, 0)
+\end{equation*}
+
+Where:
+\begin{itemize}
+\item \(\bar{S_T}\) is the average price of the underlying asset over the life of the option,
+\item \(X\) is the strike price, and
+\item The \(\max(a, b)\) function returns the greater of \(a\) and \(b\).
+\end{itemize}
+\end{enumerate}
+
+\end{document}
