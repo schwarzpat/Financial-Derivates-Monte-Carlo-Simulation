@@ -81,13 +81,13 @@ Tasks:
 
 3. **Plot Simulated Short Rate Paths:** We plotted the first 10 simulated short rate paths for each mean reversion speed. The plot is shown below:
 
-    ![Plot of the First 10 Simulated Short Rate Paths for Each Mean Reversion Speed](vasicek_paths.png)
+    ![Plot of the First 10 Simulated Short Rate Paths for Each Mean Reversion Speed](figures/figure3.png)
 
 4. **Simulate a Zero Drift Vasicek Model for Short Rates:** We simulated a zero drift Vasicek model for short rates, simulating 100 paths for 5 years with monthly sampling.
 
 5. **Plot Simulated Short Rate Paths for the Zero Drift Vasicek Model:** We plotted the first 10 simulated short rate paths for the zero drift Vasicek model. The plot is shown below:
 
-    ![Plot of the First 10 Simulated Short Rate Paths for the Zero Drift Vasicek Model](zero_drift_vasicek_paths.png)
+    ![Plot of the First 10 Simulated Short Rate Paths for the Zero Drift Vasicek Model](figures/figure4.png)
 
 6. **Compute the Cost of an Interest Rate Cap:** We computed the cost of an interest rate cap that will offset any payments larger than 2% of a 5 million SEK loan. The cost of the cap is the sum of the expected payments, where each payment is computed as:
 
